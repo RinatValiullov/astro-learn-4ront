@@ -1,0 +1,49 @@
+---
+const links = [
+  { url: '/', title: 'Home page' },
+  { url: '/about', title: 'About page' },
+  { url: '/contacts', title: 'Contacts page' },
+  { url: '/products', title: 'Products page' },
+];
+---
+
+<nav class="flex items-center bg-slate-300 p-2.5 mb-5">
+  <div class="mr-auto">
+    <a class="brand text-lg font-bold" href="#">Home</a>
+  </div>
+  <ul class="navigation flex items-center justify-around gap-2.5">
+    {
+      links.map(link => <li class="navigation__item"><a href={link.url} class="navigation__link">{link.title}</a></li>)
+    }
+  </ul>
+</nav>
+
+<!-- One way to style -->
+<!-- <style>
+  a {
+    color: currentColor;
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  nav {
+    align-items: center;
+    background-color: hsl(0deg 100% 98%);
+    display: flex;
+    padding: 10px;
+  }
+
+  nav > div {
+    margin-right: auto;
+  }
+
+  .navigation {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+  }
+</style> -->

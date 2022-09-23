@@ -1,0 +1,15 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+
+const today = new Date();
+const color = "#42a";
+---
+
+<MainLayout title="About page">
+  <h1 class="text-2xl font-bold mb-3">About</h1>
+
+  <a href="/" class="bg-slate-100 p-1">Home page</a>
+
+  <br>
+  <time datetime="2022-09-24" style={{color}}>{today.toDateString()}</time>
+</MainLayout>
