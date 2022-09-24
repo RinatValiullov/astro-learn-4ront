@@ -19,6 +19,10 @@ export function UserCard({ user }: UserCardProps) {
         {user.phone}
       </a>
 
+      <a href={`/user/${user.id}`} className="block p-1 m-2 bg-cyan-200">
+        Open user page
+      </a>
+
       <button
         className="px-2 py-1 my-4 w-32 rounded text-white bg-cyan-700 hover:bg-cyan-800"
         onClick={toggleVisibility}
