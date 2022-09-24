@@ -1,4 +1,5 @@
 ---
+import { RandomColor } from '../components/RandomColor';
 import { UserCard } from '../components/UserCard';
 import MainLayout from '../layouts/MainLayout.astro';
 import { User } from '../types';
@@ -14,4 +15,6 @@ const users = (await response.json()) as User[];
   {users.map(userItem => {
     return <UserCard user={ userItem } client:load />
   })}
+
+  <RandomColor client:visible />
 </MainLayout>
